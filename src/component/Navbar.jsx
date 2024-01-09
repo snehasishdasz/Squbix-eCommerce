@@ -4,23 +4,16 @@ import React from "react";
 function Navbar() {
     return (
         <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow-sm">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 shadow-sm">
         <div className="container">
           <a className="navbar-brand fw-bold fs-4" to="/">
-          {/* <img class="w-25" src="/assets/logo1.png" alt="" /> */}
-          <span class="text-warning">S</span>D <span>M</span>art
+          <img width="150" height="50" src="/assets/logo2.png" alt="" />
+          {/* <span class="text-warning">S</span>D <span>M</span>art */}
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
