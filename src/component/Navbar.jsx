@@ -1,15 +1,15 @@
 import React from "react";
-// import {a} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function Navbar() {
     return (
         <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 shadow-sm">
         <div className="container">
-          <a className="navbar-brand fw-bold fs-4" to="/">
+          <NavLink className="navbar-brand fw-bold fs-4" to="/">
           <img width="150" height="50" src="/assets/logo2.png" alt="" />
           {/* <span class="text-warning">S</span>D <span>M</span>art */}
-          </a>
+          </NavLink>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -17,33 +17,33 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" to="/">
+                <NavLink className="nav-link " aria-current="page" to="/">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" to="/products">
+                <NavLink className="nav-link" to="/products">
                   Products
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/about">
                   About
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" to="/contact">
+                <NavLink className="nav-link" to="/contact">
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
             <div className="buttons">
-                <a to="/login" className="btn btn-outline-light">
-                   <i className="fa fa-sign-in me-1"></i> Login</a>
-                <a to="/register" className="btn btn-outline-light ms-2">
-                   <i className="fa fa-user-plus me-1"></i> Register</a>
-                <a to="/cart" className="btn btn-outline-light ms-2">
-                   <i className="fa fa-shopping-cart me-1"></i> Cart</a>
+                <NavLink to="/login" className="btn btn-outline-light">
+                   <i className="fa fa-sign-in me-1"></i> Login</NavLink>
+                <NavLink to="/register" className="btn btn-outline-light ms-2">
+                   <i className="fa fa-user-plus me-1"></i> Register</NavLink>
+                <NavLink to="/cart" className="btn btn-outline-light ms-2">
+                   <i className="fa fa-shopping-cart me-1"></i> Cart</NavLink>
             </div>
           </div>
         </div>

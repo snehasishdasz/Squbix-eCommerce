@@ -3,8 +3,9 @@
   font-size: 18px;
 }
 
+/* For BUY button */
 .stylebtn {
-  --color: green;
+  --color: rgb(8, 176, 8);
   text-decoration: none; 
   font-family: inherit;
   display: inline-block;
@@ -49,7 +50,6 @@
 
 /* Card in Home */
 .hovering{
-  background: #F8E559;
   cursor: pointer;
   transition: all 0.3s;
 }
