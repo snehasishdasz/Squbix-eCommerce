@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
+import { NavLink } from 'react-router-dom';
 
 const Products = () => {
     const [data, setData] = useState([]);
@@ -47,8 +49,8 @@ const Products = () => {
     };
 
     //This function logic is use for filtering, basically here i match the category to the parameter.
-    const filterProduct = (filtering)=>{
-        const updatedList = data.filter((xyz)=>xyz.category === filtering)
+    const filterProduct = (filtering) => {
+        const updatedList = data.filter((xyz) => xyz.category === filtering)
         setFilter(updatedList);
     }
 
@@ -56,19 +58,19 @@ const Products = () => {
         return (
             <>
                 <div className="buttons d-flex justify-content-center mb-5 pb-5">
-                    <button className="btn btn-outline-dark me-2" onClick={()=>setFilter(data)}>
+                    <button className="btn btn-outline-dark me-2" onClick={() => setFilter(data)}>
                         All
                     </button>
-                    <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("men's clothing")}>
+                    <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("men's clothing")}>
                         Men's Clothing
                     </button>
-                    <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("women's clothing")}>
+                    <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("women's clothing")}>
                         Women's Clothing
                     </button>
-                    <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("jewelery")}>
+                    <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("jewelery")}>
                         Jewelery
                     </button>
-                    <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("electronics")}>
+                    <button className="btn btn-outline-dark me-2" onClick={() => filterProduct("electronics")}>
                         Electronic
                     </button>
                 </div>
@@ -76,15 +78,17 @@ const Products = () => {
                     return (
                         <div className="col-md-3 mb-4">
                             <div class="card h-100 text-center p-4 hovering" key={product.id}>
-                                <img src={product.image} class="card-img-top " alt={product.title} height="250px" />
+                                <img src={product.image } class="card-img-top " alt={product.title} height="250px" />
                                 <div class="card-body">
                                     <h5 class="card-title mb-0">{product.title.substring(0, 12)}...</h5>
                                     <p class="card-text lead fw-bold">
                                         ${product.price}
                                     </p>
-                                    <a class=" stylebtn">
-                                        Buy Now
-                                    </a>
+                                    <div className="stylebtn">
+                                        <NavLink to={`/products/${product.id}`}>
+                                            Buy Now
+                                        </NavLink>
+                                    </div>
                                 </div>
                             </div>
                         </div>

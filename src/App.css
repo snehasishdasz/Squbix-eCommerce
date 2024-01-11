@@ -4,7 +4,7 @@
 }
 
 /* For BUY button */
-.stylebtn {
+div .stylebtn {
   --color: rgb(8, 176, 8);
   text-decoration: none; 
   font-family: inherit;
