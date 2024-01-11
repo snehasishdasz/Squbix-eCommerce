@@ -4,9 +4,20 @@
 }
 
 /* For BUY button */
+
+div .stylebtn a 
+{
+  color: black;
+  text-decoration: none;
+}
+div .stylebtn a:hover 
+{
+  color: white;
+  text-decoration: none;
+}
 div .stylebtn {
   --color: rgb(8, 176, 8);
-  text-decoration: none; 
+  /* text-decoration: none;  */
   font-family: inherit;
   display: inline-block;
   width: 6em;
