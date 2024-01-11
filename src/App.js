@@ -5,6 +5,7 @@ import {Route,Routes} from "react-router-dom"
 import Products from './component/Products';
 import About from './component/About';
 import Product from './component/Product';
+import Cart from './component/Cart';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route  path="/products" element={<Products/>} />
         <Route  path="/about" element={<About/>} />
         <Route  path="/products/:id" element={<Product/>} />
-        {/* <Route  path="/cart" element={Cart} /> */}
+        <Route  path="/cart" element={<Cart/>} />
     </Routes>
     
     </>
