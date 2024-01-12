@@ -1,3 +1,12 @@
+#### Get all items
+
+```http
+  To run this locally-
+    1st Step - Clone (https://github.com/snehasishdasz/Squbix-eCommerce.git)
+    2nd Step - npm i on your terminal
+    3rd Step - npm start
+```
+
 <h1 align="center">
     ⚡ SD Mart: Ecommerce Portal ⚡
 </h1>
@@ -56,8 +65,8 @@ Explore the live demo [SD-Mart](https://sdmart.vercel.app/).
 
 ```http
   fetch('https://fakestoreapi.com/products')
-//output
-[
+     //output
+            [
                 {
                     id:1,
                     title:'...',
@@ -76,6 +85,7 @@ Explore the live demo [SD-Mart](https://sdmart.vercel.app/).
                     image:'...'
                 }
             ]
+
 ```
 
 #### Get item
