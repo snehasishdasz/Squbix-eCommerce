@@ -54,7 +54,12 @@ const Products = () => {
         setFilter(updatedList);
     }
 
+    const convertToRupees = (priceInDollars, exchangeRate) => {
+        return (priceInDollars * exchangeRate).toFixed(2);
+    };
+
     const ShowProducts = () => {
+        const exchangeRate = 81;
         return (
             <>
                 <div className="buttons d-flex justify-content-center mb-5 pb-5">
@@ -82,7 +87,7 @@ const Products = () => {
                                 <div class="card-body">
                                     <h5 class="card-title mb-0">{product.title.substring(0, 12)}...</h5>
                                     <p class="card-text lead fw-bold">
-                                        ${product.price}
+                                        ₹ {convertToRupees(product.price, exchangeRate)}
                                     </p>
                                     <div className="stylebtn">
                                         <NavLink to={`/products/${product.id}`}>

@@ -12,7 +12,12 @@ const Product = () => {
     const dispatch = useDispatch();
     const addProduct = (product) => {
         dispatch(addCart(product));
+        alert("item added to cart successfully")
     }
+
+    const convertToRupees = (priceInDollars, exchangeRate) => {
+        return (priceInDollars * exchangeRate).toFixed(2);
+    };
 
     useEffect(() => {
         const getProduct = async () => {
@@ -45,6 +50,7 @@ const Product = () => {
     }
 
     const ShowProduct = () => {
+        const exchangeRate = 81;
         return (
             <>
                 <div className="col-md-6">
@@ -60,7 +66,7 @@ const Product = () => {
                         <i className="fa fa-star"></i>
                     </p>
                     <h3 className="display-6 fw-bold my-4">
-                        $ {product.price}
+                        ₹ {convertToRupees(product.price, exchangeRate)}
                     </h3>
                     <p className="lead">{product.description}</p>
                     <button className="btn btn-outline-dark px-4 py-2" onClick={()=>addProduct(product)}>
